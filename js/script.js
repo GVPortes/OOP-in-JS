@@ -5,7 +5,7 @@
 const animal = {
     name: "Bob",
     age: 5,
-    latir: function() {
+    bark: function() {
         console.log("Woof! Woof!");
     }
 };
@@ -16,6 +16,28 @@ const animal = {
 console.log(`"Dogs name is ${animal.name}`);
 console.log(`"Dogs age is ${animal.age}"`);
 // Calling the method       
-console.log(`"Calling the method: ${animal.latir()}"`)
-animal.latir();
+console.log(`"Calling the method: ${animal.bark()}"`)
+animal.bark();
+
+// Defining a person object with methods to get and set the name
+// This object represents a person with a name and methods to get and set the name
+
+const person = {
+    name: "John",
+
+    getName: function() {
+        return this.name;
+    },
+    setName: function(newName) {
+        this.name = newName;
+    }
+};
+
+console.log(`"Person's name is ${person.getName()}"`);
+console.log(`"Person's name is ${person.name}"`);
+person.setName("Jane");
+console.log(`"Person's name is now ${person.getName()}"`);
+
+
+//Prototypes
 
